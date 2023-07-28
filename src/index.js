@@ -47,6 +47,10 @@ io.on("connection", (socket) => {
   //   socket.broadcast.to(`${sala}`).emit("message",`${userName} se ha unido al chat`)
   // })
 });
+app.get("/",(req,res)=>{
+  console.log("estuve aqui")
+  req.send("ok")
+})
 
 app.post("/", async (req, res) => {
   try {
